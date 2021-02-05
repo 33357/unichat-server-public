@@ -1,0 +1,9 @@
+{
+    "name": "unichat-server-redisdb",
+    "script": "/usr/local/redis/bin/redis-server",
+    "args": " ./pm2/redis.conf",
+    "log_date_format": "YYYY-MM-DD HH:mm Z",
+    "watch": false,
+    "out_file" : "./logs/redis/out_log",
+    "error_file" : "./logs/redis/log/error.log"
+}

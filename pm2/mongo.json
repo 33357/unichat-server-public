@@ -1,0 +1,9 @@
+{
+    "name": "unichat-server-mongodb",
+    "script": "mongod",
+    "args": "--dbpath=./db/mongodb --bind_ip=127.0.0.1 --auth --port 27010",
+    "log_date_format": "YYYY-MM-DD HH:mm Z",
+    "watch": false,
+    "out_file" : "./logs/mongodb/out_log",
+    "error_file" : "./logs/mongodb/error.log"
+}
