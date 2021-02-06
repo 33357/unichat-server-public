@@ -1,7 +1,7 @@
 <!--
  * @Author: 33357
  * @Date: 2021-02-05 13:01:49
- * @LastEditTime: 2021-02-06 11:02:18
+ * @LastEditTime: 2021-02-06 11:05:10
  * @LastEditors: 33357
 -->
 
@@ -133,8 +133,8 @@ see [egg docs](https://eggjs.org) for more detail.
 
 ## 加入贡献
 
-暂不支持加入贡献，但可以发起讨论。
+暂不支持加入贡献，但欢迎发起讨论。
 
 ## 开源协议
 
-[MIT](LICENSE) © Richard Littauer
+[MIT](LICENSE)
