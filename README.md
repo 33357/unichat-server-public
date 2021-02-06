@@ -1,7 +1,7 @@
 <!--
  * @Author: 33357
  * @Date: 2021-02-05 13:01:49
- * @LastEditTime: 2021-02-06 10:59:14
+ * @LastEditTime: 2021-02-06 11:02:18
  * @LastEditors: 33357
 -->
 
@@ -31,6 +31,7 @@ unichat Server端开源信息
 
 ## 项目结构
 
+```
 unichat-server-public
 ├── app                                             //app
 │   ├── controller                                  //控制器
@@ -100,6 +101,7 @@ unichat-server-public
         └── controller
             ├── user.test.js                        //user测试
             └── user_setting.test.js                //userSetting测试
+```
 
 ## 安装说明
 
