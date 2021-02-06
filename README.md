@@ -1,7 +1,7 @@
 <!--
  * @Author: 33357
  * @Date: 2021-02-05 13:01:49
- * @LastEditTime: 2021-02-06 10:20:37
+ * @LastEditTime: 2021-02-06 10:59:14
  * @LastEditors: 33357
 -->
 
@@ -32,70 +32,74 @@ unichat Server端开源信息
 ## 项目结构
 
 unichat-server-public
-├── app
-│   ├── controller
-│   │   ├── data.js
-│   │   ├── user.js
-│   │   └── user_setting.js
-│   ├── core
-│   │   └── http_controller.js
-│   ├── extend
-│   │   ├── helper
-│   │   │   ├── error_code.js
-│   │   │   ├── session.js
-│   │   │   ├── sign.js
-│   │   │   └── token_list.js
-│   │   └── helper.js
-│   ├── io
-│   │   ├── controller
-│   │   │   └── chat.js
-│   │   ├── core
-│   │   │   └── socket_controller.js
-│   │   └── middleware
-│   │       ├── auth.js
-│   │       └── packet.js
-│   ├── middleware
-│   │   ├── error_handler.js
-│   │   ├── gzip.js
-│   │   ├── report.js
-│   │   └── support.js
-│   ├── model
-│   │   ├── chat.js
-│   │   ├── user.js
-│   │   └── user_setting.js
-│   ├── router
-│   │   └── api
-│   │       └── v1
-│   ├── router.js
-│   ├── service
-│   │   ├── chat.js
-│   │   ├── data.js
-│   │   ├── user.js
-│   │   └── user_setting.js
-│   └── validate
-│       └── user.js
-├── app.js
+├── app                                             //app
+│   ├── controller                                  //控制器
+│   │   ├── data.js                                 //data请求
+│   │   ├── user.js                                 //user请求
+│   │   └── user_setting.js                         //userSetting请求
+│   ├── core                                        //基类
+│   │   └── http_controller.js                      //httpController基类
+│   ├── extend                                      //扩展
+│   │   ├── helper                                  //辅助扩展
+│   │   │   ├── error_code.js                       //错误代码
+│   │   │   ├── session.js                          //session映射redis
+│   │   │   ├── sign.js                             //eth签名处理
+│   │   │   └── token_list.js                       //token列表
+│   │   └── helper.js                               //辅助入口
+│   ├── io                                          //socket
+│   │   ├── controller                              //控制
+│   │   │   └── chat.js                             //chat控制
+│   │   ├── core                                    //基类
+│   │   │   └── socket_controller.js                //socketController基类
+│   │   └── middleware                              //socket中间件
+│   │       ├── auth.js                             //认证处理
+│   │       └── packet.js                           //包处理
+│   ├── middleware                                  //中间件
+│   │   ├── error_handler.js                        //错误捕获
+│   │   ├── gzip.js                                 //gzip压缩
+│   │   ├── report.js                               //时间汇报
+│   │   └── support.js                              //预处理
+│   ├── model                                       //数据库模型
+│   │   ├── chat.js                                 //chat模型
+│   │   ├── user.js                                 //user模型
+│   │   └── user_setting.js                         //usersetting模型
+│   ├── router                                      //路由器
+│   │   └── api                                     //api
+│   │       └── v1                                  //v1
+│   │           ├── data.js                         //data请求
+│   │           ├── io.js                           //socket请求
+│   │           ├── user_setting.js                 //userSetting请求
+│   │           └── user.js                         //user请求
+│   ├── router.js                                   //路由入口
+│   ├── service                                     //服务器
+│   │   ├── chat.js                                 //chat服务
+│   │   ├── data.js                                 //data服务
+│   │   ├── user.js                                 //user服务
+│   │   └── user_setting.js                         //userSetting服务
+│   └── validate                                    //规则验证文件
+│       └── user.js                                 //user
+├── app.js                                          //app入口文件
 ├── appveyor.yml
-├── config
-│   ├── config.default.js
-│   ├── config.local.js
-│   ├── config.prod.js
-│   ├── config.unittest.js
-│   └── plugin.js
+├── config                                          //配置文件
+│   ├── config.default.js                           //默认配置文件
+│   ├── config.local.js                             //本地配置文件
+│   ├── config.prod.js                              //部署配置文件
+│   ├── config.unittest.js                          //单元测试配置文件
+│   └── plugin.js                                   //插件
 ├── jsconfig.json
-├── LICENSE
+├── LICENSE                                         //开源协议
 ├── package-lock.json
 ├── package.json
-├── pm2
-│   ├── mongo.json
-│   ├── redis.conf
-│   └── redis.json
-├── README.md
-└── test
+├── pm2                                             //pm2运行JSON
+│   ├── mongo.json                                  //mongodb运行JSON
+│   ├── redis.conf                                  //redis配置文件
+│   └── redis.json                                  //redis运行JSON
+├── README.md                                       //说明文档
+└── test                                            //单元测试
     └── app
         └── controller
-            ├── user.test.js
-            └── user_setting.test.js
+            ├── user.test.js                        //user测试
+            └── user_setting.test.js                //userSetting测试
 
 ## 安装说明
 
